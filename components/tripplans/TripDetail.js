@@ -5,6 +5,7 @@ import MyStyles from "../../styles/MyStyles"
 const TripDetail = ({instance}) => {
     return <>
         <Image source={{uri: instance.image}} style={MyStyles.pic_full}/>
+        
         <View style={[MyStyles.description_area, MyStyles.padding_item]}>
             <Text>Nơi đến: {instance.destination}</Text>
             <Text>{instance.description.replace(/<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g, '')}</Text>

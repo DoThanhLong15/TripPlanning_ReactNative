@@ -29,7 +29,7 @@ const TripPlanForm = ({textFields, datetimeFields, instance, button}) => {
     };
 
     const formatNumber = (field) => {
-        let temp = newTripPlan[field] !== undefined ? newTripPlan[field]: tripplan[field];
+        let temp = newTripPlan && newTripPlan[field] !== undefined ? newTripPlan[field]: tripplan[field];
 
         if(field == "expectCost" && temp != undefined) {
             temp = temp.toLocaleString().replace(/,/g," ",)

@@ -84,11 +84,11 @@ const NewTripPlan = ({navigation}) => {
                 }
             })
             
-            navigation.navigate("TripPlan", {
+            navigation.navigate("Trip", {
                 "toast": {
                     "message": "Tạo mới hành trình thành công",
                     "type": "success"
-                }, "reload": true
+                }, "tripplan": res.data
             })
 
         } catch(ex) {

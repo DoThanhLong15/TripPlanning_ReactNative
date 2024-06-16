@@ -172,6 +172,12 @@ const Trip = ({route, navigation}) => {
         }
     }
 
+    const goNewTrip = () => {
+        navigation.navigate("NewTrip", {
+            "tripplan": tripplan
+        })
+    }
+
     const goEditTripPlan = () => {
         navigation.navigate("EditTripPlan", {
             "tripplan": tripplan
@@ -229,6 +235,13 @@ const Trip = ({route, navigation}) => {
                     </View>)}
 
                 <EmptyList list={trip} type="điểm đến"/>
+
+                {user?.id === tripplan.user.id && 
+                <View style={[MyStyles.margin]}>
+                    <Button mode="contained"
+                        onPress={goNewTrip}>Tạo điểm đến
+                    </Button>
+                </View>}
                 
 
                 {/* comment area */}
