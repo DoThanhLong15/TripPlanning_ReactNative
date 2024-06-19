@@ -14,7 +14,9 @@ const Item = ({instance}) => {
             }
             description={instance.created_date?moment(instance.created_date).fromNow():""}
             left={() => 
-            <Image style={MyStyles.avatar} source={{uri: instance.user.avatar}} />} />
+            <Image style={MyStyles.avatar} source={{uri: instance.user?.avatar}} />} />
+
+
             <View style={[MyStyles.padding_item, MyStyles.description_area]}>
                 <Text style={[MyStyles.padding_item, MyStyles.descrip_title]}>{instance.title}</Text>
                 <View style={MyStyles.padding_item}>

@@ -8,6 +8,7 @@ import { MyDispatcherContext } from "../../configs/Contexts";
 import { ToastShow, CheckEmptyInput, CheckToastMessage } from "../utils/Utils";
 import Toast from "react-native-toast-message";
 
+
 const Login = ({navigation, route}) => {
     const [user, setUser] = React.useState({});
     const fields = [{
@@ -103,6 +104,7 @@ const Login = ({navigation, route}) => {
                         <Text style={[MyStyles.margin, MyStyles.linkText]}>Chưa có tài khoản</Text>
                     </TouchableOpacity>
                 </KeyboardAvoidingView>
+
             </ScrollView>
 
             <Toast position="top" topOffset={0}/>

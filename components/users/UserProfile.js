@@ -18,16 +18,22 @@ const UserProfile = ({navigation}) => {
         icon: 'email',
         name: 'email'
     },{
-        label: `Số lượt đánh giá: ${user.rating}`,
+        label: `Điểm đánh giá: ${user.rating}`,
         icon: 'number',
         name: 'rating'
     },{
-        label: `Điểm đánh giá: ${user.ratingCount}`,
+        label: `Số lượt đánh giá: ${user.ratingCount}`,
         icon: 'number',
         name: 'ratingCount'
     }]
 
-    const goEdit = () => navigation.navigate("EditUser")
+    const goEdit = () => {
+        navigation.navigate("EditUser")
+    }
+
+    const goJoinedTripPlan = () => {
+        navigation.navigate("JoinedTripPlan")
+    }
 
     const logout = async () => {
         await AsyncStorage.removeItem('user');
@@ -54,6 +60,10 @@ const UserProfile = ({navigation}) => {
                 <Text style={[MyStyles.mg_10, MyStyles.text_center, MyStyles.title]}>{user.last_name} {user.first_name}</Text>
 
                 {data.map(f => <Text key={f.name} style={[MyStyles.comment, MyStyles.mg_10, MyStyles.pd_20]}>{f.label}</Text>)}
+
+                <TouchableOpacity style={MyStyles.mg_t_5} onPress={goJoinedTripPlan}>
+                    <Text style={[MyStyles.button, MyStyles.padding_item, MyStyles.text_center]}>Hành trình đã tham gia</Text>
+                </TouchableOpacity>
 
                 <TouchableOpacity style={MyStyles.mg_t_5} onPress={goEdit}>
                     <Text style={[MyStyles.button, MyStyles.padding_item, MyStyles.text_center]}>Sửa trang cá nhân</Text>

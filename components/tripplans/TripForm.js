@@ -35,8 +35,6 @@ const TripForm = ({timeField, textFields, instance, button, saveHandle}) => {
                 return <Image source={{uri: trip.image.uri}} style={MyStyles.pic_full} />
             return <Image source={{uri: trip.image}} style={MyStyles.pic_full} />
         }
-
-        return <></>;
     }
 
     const showValueInput = (field) => {
@@ -69,7 +67,7 @@ const TripForm = ({timeField, textFields, instance, button, saveHandle}) => {
                 <Text style={[MyStyles.description, MyStyles.margin]}>Chọn hình điểm đến...</Text>
             </TouchableRipple>
 
-            {showImage()}
+            {newTrip || trip.image ? showImage(): <Text>Không có hình ảnh</Text>}
 
             <DateTimePickerModal 
                 mode="time"
@@ -82,8 +80,6 @@ const TripForm = ({timeField, textFields, instance, button, saveHandle}) => {
             <HelperText type="error" visible={instance.error.visible}>
                 {instance.error.message}
             </HelperText>
-
-            {showImage}
 
 
             {/* save button  */}

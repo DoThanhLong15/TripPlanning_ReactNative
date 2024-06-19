@@ -15,6 +15,9 @@ import EditUser from "./components/users/EditUser";
 import NewTripPlan from "./components/tripplans/NewTripPlan";
 import EditTripPlan from "./components/tripplans/EditTripPlan";
 import NewTrip from "./components/tripplans/NewTrip";
+import EditTrip from "./components/tripplans/EditTrip";
+import JoinedTripPlan from "./components/users/JoinedTripPlan";
+import ReportUser from "./components/tripplans/ReportUser";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +30,8 @@ const TripPlanStack = () => {
 
       <Stack.Screen name="Trip" component={Trip} options={{title: "Chi tiết chuyến đi"}}/>
       <Stack.Screen name="NewTrip" component={NewTrip} options={{title: "Tạo điểm đến"}}/>
+      <Stack.Screen name="EditTrip" component={EditTrip} options={{title: "Chỉnh sửa điểm đến"}}/>
+      <Stack.Screen name="ReportUser" component={ReportUser} options={{title: "Báo cáo vi phạm"}}/>
     </Stack.Navigator>
   );
 }
@@ -36,6 +41,8 @@ const UserProfileStack = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="UserProfile" component={UserProfile} options={{title: "Trang cá nhân"}}/>
       <Stack.Screen name="EditUser" component={EditUser} options={{title: "Sửa trang cá nhân"}}/>
+      <Stack.Screen name="JoinedTripPlan" component={JoinedTripPlan} 
+        options={{title: "Danh sách các hành trình đã tham gia"}}/>
     </Stack.Navigator>
   );
 }

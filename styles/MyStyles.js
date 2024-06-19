@@ -26,6 +26,8 @@ export default StyleSheet.create({
         margin: 10
     },pd_20: {
         padding: 20
+    }, pd_10: {
+        padding: 10
     },dp_flex: {
         flex: 1,
         alignItems: "center"
@@ -67,8 +69,18 @@ export default StyleSheet.create({
         marginTop: 5
     },w_100:{
         width: "100%"
-    }, w_45: {
-        width: "45%"
+    }, w_80: {
+        width: "80%"
+    }, w_70: {
+        width: "70%"
+    }, w_40: {
+        width: "40%"
+    }, w_50: {
+        width: "50%"
+    }, w_30: {
+        width: "30%"
+    }, w_20: {
+        width: "20%"
     },text_center: {
         textAlign: "center"
     },button: {
@@ -127,5 +139,11 @@ export default StyleSheet.create({
     }, flex_row: {
         flexDirection: "row",
         justifyContent: "space-evenly"
+    }, bd_bt: {
+        borderBottomWidth: 1,
+        borderBottomColor: "#ccc"
+    }, google_button: {
+        width: 100, 
+        height: 100
     }
 });
